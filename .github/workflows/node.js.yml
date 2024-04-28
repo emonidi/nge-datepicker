@@ -45,7 +45,7 @@ jobs:
         # Determines whether the published package should be publicly visible, or restricted to members of your NPM organization. This only applies to scoped packages.
         # access: # optional
         # If true, run with the --dry-run flag
-        dry-run: true # optional, default is false
+        # dry-run: true # optional, default is false
         # Only publish if the version in package.json differs from the latest on NPM
         # check-version: # optional, default is true
               
