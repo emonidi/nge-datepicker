@@ -29,7 +29,8 @@ jobs:
     - run: npm install
     - run: npm run build --if-present -- --project=nge-datepicker 
     - run: cd ./dist/nge-datepicker && npm publish
-      env: ${{secrets.NPM_TOKEN}}
+      env: 
+        NODE_AUTH_TOKEN : ${{secrets.NPM_TOKEN}}
     # - name: NPM Publish V2
     #   # You may pin to the exact commit or the version.
     #   # uses: bluecargo/npm-publish@460607489cab22841696e500d41e1c388ce757a0
