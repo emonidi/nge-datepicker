@@ -1,6 +1,6 @@
 {
   "name": "nge-datepicker",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "ng": "ng",
     "start": "concurrently \"ng build --watch --project=ng-datepicker\"  \"ng serve --watch --project=showcase --open --hmr\"",
