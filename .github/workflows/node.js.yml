@@ -39,7 +39,7 @@ jobs:
         # The NPM registry URL to use
         # registry: # optional, default is https://registry.npmjs.org/
         # The path of your package.json file
-        # package: # optional, default is package.json
+        package: ./dist/ng-datepicker/package.json # optional, default is package.json
         # The tag to publish to. This allows people to install the package using "npm install <package-name>@<tag>".
         # tag: # optional, default is latest
         # Determines whether the published package should be publicly visible, or restricted to members of your NPM organization. This only applies to scoped packages.
