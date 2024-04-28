@@ -1,0 +1,74 @@
+.ng-datepicker{
+  padding: 5px;
+  position: fixed;
+
+  min-height: 200px;
+  background: #333333;
+
+  color: white;
+  .month-days, .weekdays-header{
+
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+
+    .day{
+      background: #434343;
+      color: #fff;
+      min-height: 60px;
+      min-width: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      cursor: pointer;
+      border:none;
+      &:hover{
+          background: lighten(#434343,10%);
+      }
+      &:focus-visible {
+        outline: solid #F19C1A;
+      }
+      &.selected{
+        background: #F19C1A;
+      }
+      &:not(:nth-child(7n)){
+        margin-right: 5px;
+      }
+      margin-bottom: 5px;
+      &:not(.active){
+        margin-bottom: 5px;
+        border-radius: 0;
+        background: none;
+      }
+    }
+  }
+  .weekdays-header{
+    .day{
+      margin-bottom: 5px;
+      border-radius: 0;
+      background: none;
+    }
+  }
+  .year-display{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0;
+    width: 100%;
+    justify-content:space-evenly;
+    align-items: center;
+    button{
+      &:focus-visible {
+        outline: solid #F19C1A;
+      }
+      background: #434343;
+      color: #fff;
+      border:none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      height: 40px;
+      width: 40px;
+    }
+  }
+}

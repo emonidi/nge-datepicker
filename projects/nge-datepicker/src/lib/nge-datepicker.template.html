@@ -1,0 +1,27 @@
+<div class="ng-datepicker">
+    <div class="month-header"></div>
+    <div class="year-display">
+        <button (click)="changeYear(-1)"><<</button>
+        <button (click)="changeMonth(-1)"><</button>
+        <span>{{ datePickerService.formatDate(activeDate, "MM yyyy") }}</span>
+        <button (click)="changeMonth(1)"> ></button>
+        <button (click)="changeYear(1)"> >></button>
+    </div>
+    <div class="weekdays-header">
+        <div class="day" *ngFor="let day of weekdaysHeader">{{ day }}</div>
+    </div>
+    <div class="month-days">
+        <button
+         *ngFor="let day of daysInMonth()"
+         class="day"
+         [class.is-first]="datePickerService.ifFirstDayOfMonth(day)"
+         [class.active]="isActiveDay(day)"
+         [class.selected]="selectedDate.toISOString() === day.toISOString()"
+         [tabindex]="isActiveDay(day) ? 0 : -1"
+         (click)="selectDate(day)"
+         (focusout)="onDateFocusOut(day)"
+
+        > {{ day.getDate() }}
+        </button>
+    </div>
+</div>
