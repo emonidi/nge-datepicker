@@ -1,21 +1,21 @@
+@use "_vairables";
 .ng-datepicker{
   padding: 5px;
   position: fixed;
-
+  border: vairables.$date_picker_border_type vairables.$datepicker_border_color vairables.$datepicker_border_width;
   min-height: 200px;
-  background: #333333;
+  background: vairables.$color_primary;
 
-  color: white;
+  color: vairables.$font_color;
   .month-days, .weekdays-header{
 
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(7, vairables.$day_width);
 
     .day{
-      background: #434343;
-      color: #fff;
-      min-height: 60px;
-      min-width: 60px;
+      background: vairables.$color_secondary;
+      color: vairables.$font_color;
+      height: vairables.$day_height;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -23,13 +23,13 @@
       cursor: pointer;
       border:none;
       &:hover{
-          background: lighten(#434343,10%);
+          background: darken(vairables.$color_secondary,10%);
       }
       &:focus-visible {
-        outline: solid #F19C1A;
+        outline: solid vairables.$accent_color;
       }
       &.selected{
-        background: #F19C1A;
+        background: vairables.$accent_color;
       }
       &:not(:nth-child(7n)){
         margin-right: 5px;
@@ -60,8 +60,8 @@
       &:focus-visible {
         outline: solid #F19C1A;
       }
-      background: #434343;
-      color: #fff;
+      background: vairables.$color_secondary;
+      color: vairables.$font_color;
       border:none;
       display: flex;
       align-items: center;

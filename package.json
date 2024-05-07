@@ -3,11 +3,12 @@
   "version": "0.0.3",
   "scripts": {
     "ng": "ng",
-    "start": "concurrently \"ng build --watch --project=ng-datepicker\"  \"ng serve --watch --project=showcase --open --hmr\"",
+    "start": "concurrently \"ng build nge-datepicker --watch\"  \"ng serve --project=showcase --open --hmr\"",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
+  "workspaces": ["./projects/nge-datepicker/*"],
   "private": false,
   "dependencies": {
     "@angular/animations": "^17.3.0",
@@ -16,7 +17,8 @@
     "@angular/core": "^17.3.0",
     "@angular/forms": "^17.3.0",
     "@angular/platform-browser": "^17.3.0",
-    "@angular/platform-browser-dynamic": "^17.3.0",
+    "@angular/platform-browser-dynamic": "^17.3 .0",
+  
     "@angular/router": "^17.3.0",
     "concurrently": "^8.2.2",
     "date-fns": "^3.6.0",

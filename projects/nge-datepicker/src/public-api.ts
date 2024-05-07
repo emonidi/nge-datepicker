@@ -4,3 +4,4 @@
 
 export * from './lib/nge-datepicker.service';
 export * from './lib/nge-datepicker.component';
+export * from './lib/nge-datepicker.directive';

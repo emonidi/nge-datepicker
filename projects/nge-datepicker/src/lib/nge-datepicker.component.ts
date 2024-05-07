@@ -1,24 +1,25 @@
 import {
     Component,
     EventEmitter,
-    HostListener,
     Input,
     OnInit,
     Output,
     signal,
     ViewContainerRef,
+    ViewEncapsulation,
     WritableSignal
 } from '@angular/core';
-import {DayInMonth, NgeDatepickerService} from "./nge-datepicker.service";
-import {NgClass, NgFor, NgForOf} from "@angular/common";
-import {format, parse, toDate} from "date-fns";
+import {NgeDatepickerService} from "./nge-datepicker.service";
+import {NgClass, NgForOf} from "@angular/common";
+import {parse} from "date-fns";
 
 @Component({
     selector: 'nge-datepicker',
     standalone: true,
     imports: [NgForOf, NgClass],
+    encapsulation:ViewEncapsulation.None,
     templateUrl: "./nge-datepicker.template.html",
-    styleUrl: "./nge-datepicker.style.scss"
+   
 })
 export class NgeDatepickerComponent implements OnInit {
 

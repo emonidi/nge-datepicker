@@ -11,8 +11,8 @@
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
     "paths": {
-      "ng-datepicker": [
-        "./dist/ng-datepicker"
+      "@emonidi/nge-datepicker": [
+        "./projects/nge-datepicker/src/public-api"
       ]
     },
     "esModuleInterop": true,
