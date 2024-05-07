@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import {NgeDatepickerComponent} from "../../../nge-datepicker/src/lib/nge-datepicker.component";
+import {NgeDatepickerComponent, NgeDatepickerDirective} from "@emonidi/nge-datepicker";
 import {NgFor, NgForOf} from "@angular/common";
-import {NgeDatepickerDirective} from "../../../nge-datepicker/src/lib/nge-datepicker.directive";
 
 @Component({
   selector: 'app-root',
